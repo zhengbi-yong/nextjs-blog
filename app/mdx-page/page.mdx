@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Button from "@mui/material/Button";
+
 # Welcome to my MDX page!
 
 This is some **bold** and _italics_ text.
@@ -16,4 +19,11 @@ $$
   x=\frac{-b+\sqrt{b^2-4ac}}{2a}
 $$
 
+<Link href="/">Home</Link>
+<Button href="/" variant="contained">
+  Home
+</Button>
+
 Custom React component:
+
+如果需要使用额外的组件，则需要在项目根目录下的mdx-components.tsx中增加对相应组建的导入。

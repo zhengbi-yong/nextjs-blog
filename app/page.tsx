@@ -1,5 +1,6 @@
 import Image from "next/image";
-
+import Link from "next/link";
+import Button from "@mui/material/Button";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -107,6 +108,13 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+        <Link href="/mdx-page">mdx-page</Link>
+        <Button href="/mdx-page" variant="contained">
+          mdx-page
+        </Button>
+        <Button href="/blogs" variant="contained">
+          blogs
+        </Button>
       </div>
     </main>
   );
