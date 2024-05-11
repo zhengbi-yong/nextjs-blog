@@ -18,10 +18,16 @@
     "@mui/material-nextjs": "^5.15.11",
     "@next/mdx": "^14.2.3",
     "@types/mdx": "^2.0.13",
+    "autoprefixer": "^10.4.19",
+    "classnames": "^2.5.1",
+    "date-fns": "^3.6.0",
+    "gray-matter": "^4.0.3",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "rehype-katex": "^7.0.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
