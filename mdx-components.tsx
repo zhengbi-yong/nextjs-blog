@@ -13,6 +13,35 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: ({ children }) => (
       <h1 style={{ color: "purple", fontSize: "24px" }}>{children}</h1>
     ),
+    ul: ({ children }) => (
+      <ul style={{ paddingLeft: "1.5em", listStyleType: "disc" }}>
+        {children}
+      </ul>
+    ),
+    code: ({ children }) => (
+      <code
+        style={{
+          background: "#f5f2f0",
+          padding: "0.2em 0.4em",
+          borderRadius: "4px",
+        }}
+      >
+        {children}
+      </code>
+    ),
+    pre: ({ children }) => (
+      <pre
+        style={{
+          background: "#2d2d2d",
+          color: "#ccc",
+          padding: "1em",
+          borderRadius: "5px",
+          overflow: "auto",
+        }}
+      >
+        {children}
+      </pre>
+    ),
     // img: (props) => (
     //   <Image
     //     sizes="100vw"

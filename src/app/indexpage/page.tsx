@@ -1,6 +1,6 @@
 // app/indexpage/page.tsx
 import { createRouter } from "next/server";
-import { getSortedPostsData } from "../../lib/md/getmd";
+import { getSortedPostsData } from "../../lib/getmd";
 import Link from "next/link";
 
 export const router = createRouter()

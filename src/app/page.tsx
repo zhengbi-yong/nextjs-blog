@@ -1,30 +1,21 @@
-import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
-// import { getAllPosts } from "@/lib/getmarkdown";
-import { getAllPosts } from "@/lib/getmdx";
-export default function Index() {
-  const allPosts = getAllPosts();
+import DeveloperCard from "@/components/DeveloperCard";
+import PostList from "@/components/PostList";
+import SiteCard from "@/components/SiteCard";
+import { getPosts } from "@/lib/post";
+import { BlogPost } from "@/types/post";
 
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
+export default async function Home() {
+  const { posts }: { posts: BlogPost[] } = await getPosts();
 
   return (
-    <main>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </main>
+    <div className="flex flex-row w-full pt-12">
+      <div className="hidden md:block md:w-1/5 pl-6"></div>
+      <div className="w-full md:w-3/5 px-6">
+        <SiteCard />
+        <PostList posts={posts} />
+        <DeveloperCard />
+      </div>
+      <div className="hidden md:flex justify-end md:w-1/5 pr-6 text-right"></div>
+    </div>
   );
 }

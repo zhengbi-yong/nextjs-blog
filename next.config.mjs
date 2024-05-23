@@ -1,5 +1,7 @@
-// Import the MDX function
+// 静态加载mdx文件使用next-mdx
 import nextMDX from "@next/mdx";
+// 动态加载mdx文件使用next-mdx-remote
+import { serialize } from "next-mdx-remote/serialize";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 

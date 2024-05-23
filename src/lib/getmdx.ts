@@ -1,9 +1,9 @@
-import { Post } from "@/interfaces/post";
+import { Post } from "@/types/post";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 
-const postsDirectory = join(process.cwd(), "src/mdxposts");
+const postsDirectory = join(process.cwd(), "public/posts/mdx");
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
